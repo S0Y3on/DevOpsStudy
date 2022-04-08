@@ -27,12 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run shell
-        run: |
-          cnt=`wc -l < README.md`
-          if [ "${{ cnt }}" % 2 == 0 ]; then
-            echo Success
-          else 
-            echo Fail
+        run: sh ./test.sh
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
