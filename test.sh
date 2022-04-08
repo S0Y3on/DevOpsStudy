@@ -1,6 +1,6 @@
 cnt=`wc -l < README.md`
 if [ `expr $cnt % 2` -eq 0 ]; then
-    echo Success
+    echo 0
 else 
-    
+    exit 1
 fi
