@@ -1,0 +1,1 @@
+cnt=`wc -l < README.md`
