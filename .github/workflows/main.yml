@@ -27,7 +27,13 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run shell
-        run: sh ./test.sh
+        run: |
+          cnt=`wc -l < README.md`
+          if [ `expr $cnt % 2` -eq 0 ]; then
+              exit 0
+          else 
+              exit 1
+          fi
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
